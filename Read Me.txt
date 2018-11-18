@@ -5,10 +5,9 @@
 To install
 
 01. Create a database to use with the faucet.
-02. Import \ServerRoot\db.sql in to you database you created and then delete db.sql
-03. Edit \ServerRoot\private_html\config.php with your database and coins RPC credentials.
-04. Upload \private_html\ and \public_html\ to your servers root directory.
-05. Your domain should be aimed at \public_html\, keeping \private_html\ out of the public scope.
+02. Import db.sql in to you database you created and then delete db.sql
+03. Edit config.php with your database and hipcoins RPC credentials.
+04. Upload files to your servers root directory.
 
 That is it. Your script should now be ready to use.
 
