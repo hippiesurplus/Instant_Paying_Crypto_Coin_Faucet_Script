@@ -17,7 +17,7 @@ $nanotokend_rpc_user = "";
 $nanotokend_rpc_password = "";
 $nanotokend_rpc_port = "";
 
-$payout_amount = rand(0, 10) / 10;
+$payout_amount = rand(0, 50);
 
 $nanotokend_RPC = "http://".$nanotokend_rpc_user.":".$nanotokend_rpc_password."@".$nanotokend_rpc_server.":".$nanotokend_rpc_port."/";
 

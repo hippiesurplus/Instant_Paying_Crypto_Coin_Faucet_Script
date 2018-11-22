@@ -2,13 +2,9 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require_once('configuration.php');
+require_once('../faucet/configuration.php');
 /*     Nanotoken Faucet Script     */
 /*      Provided by: [zelles]      */
-/*  Do not remove these comments.  */
-
-/*     HipCoin Faucet Script     */
-/*      Provided by: [hippiesurplus]      */
 /*  Do not remove these comments.  */
 ?>
 <html>
@@ -48,17 +44,15 @@ require_once('configuration.php');
 		<h2>Request Free HipCoins</h2><br>
 			           <?php
            				 if(isset($body)) { echo $body; }
-          				  $time_now = strtotime('now');
-          				  $time_tomorrow = strtotime('today midnight');
-          				  $time_between = $time_tomorrow - $time_now;
-          				  $time_between_h = date("G",$time_between);
-          				  $time_between_m = date("i",$time_between);
-          				  echo $time_between_h.' hours and '.$time_between_m.' minutes until faucet reset';
-          			    ?><br><br>
-		<b>Balance: </b><?php echo $nanotokend->getbalance(); ?> HIPs<br>
+          			    ?>
+		<b>Balance: </b><?php echo $nanotokend->getbalance('4570df78e89a01c459c3cf01b36d309a'); ?> HIPs<br>
 		<input type="text" name="nanoaddr" class='input' placeholder="LNb6xt6wZaP6HKdac1PjpTCf7jAdySSK1E" autofocus required><br>
 		<input type='hidden' name='amount' value='<?php echo $payout_amount; ?>'>
 		<input type="submit" name="submit" value="Send Some HIPs" class="button"><br><br>
+		<a href='https://github.com/hippiesurplus/HipCoin'>Source Code</a>
+		<a href='../files/hipcoin-qt-windows.zip'>Windows Client</a>
+		<a href='../files/hipcoin-qt-linux.tar.gz'>Linux Client</a>
+		<a href='../wallet/'>Online Wallet</a>
 	</form>
 </div>
 </div>
